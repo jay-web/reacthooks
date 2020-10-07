@@ -15,7 +15,7 @@ const Accordion = ({ items }) => {
           {item.title}
         </div>
         <div className={`content ${active}`}>
-          <p>{item.content}</p>
+          <p dangerouslySetInnerHTML={ { __html : item.snippet}}></p>
         </div>
       </React.Fragment>
     );
