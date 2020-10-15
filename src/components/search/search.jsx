@@ -3,10 +3,10 @@ import axios from 'axios';
 import Accordion from "../Accordion/accordion"
 
 const Search = () => {
-    const [term, setTerm ] = useState("");      // First react hook
+    const [term, setTerm ] = useState("coding");      // First react hook
     const [result, setResult] = useState([]);
 
-    console.log(result);
+    
 
     useEffect(() => {               // Second react hook
         const search = async () => {
@@ -22,9 +22,20 @@ const Search = () => {
         setResult(data.query.search);
     }
 
-    if(term){
+    if(term && !result.length){
         search();
+    }else{
+        const timeoutId = setTimeout(() => {
+            if(term){
+                search();
+            }
+        }, 1000)
+    
+        return () => {
+            clearTimeout(timeoutId);
+        }
     }
+  
    
     }, [term])
 

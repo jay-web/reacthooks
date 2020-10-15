@@ -1,0 +1,30 @@
+.ui.styled.accordion {
+    width: 100% !important;
+    /* background-color: #4169e1 !important; */
+    margin-bottom: 1rem !important;
+    
+    
+  
+}
+.bgTitle {
+    background-color: #4169e1  !important;
+    color: #ffffff !important;
+   
+}
+.bgContent {
+    background-color: #000000  !important;
+    color: #ffffff !important;
+   
+}
+
+
+
+
+.contentP {
+    display: inline;
+}
+
+.readButton {
+    right: 0;
+    float: right;
+}
